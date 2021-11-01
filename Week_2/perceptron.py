@@ -24,9 +24,11 @@ class Perceptron():
         self.weights -= self.alpha * delta * self.raw_inputs
 
     def get_output(self):
+        """Get the output after the activation function."""
         return self.out
 
     def get_input(self):
+        """Get the input to the perceptron before the activation function."""
         return self.sum_inputs
 
     def get_weights(self):
@@ -35,4 +37,3 @@ class Perceptron():
 
 p = Perceptron(2)
 o = p.forward_step(np.array([4, 5]))
-#o = p.update(5)
